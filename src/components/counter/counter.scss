@@ -1,0 +1,35 @@
+@use '../../assets/styles/variables' as variables;
+
+.counter-container {
+  color: variables.$grey-darker;
+  display: flex;
+  justify-content: space-between;
+  width: 215px;
+
+  .title-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .counter {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 112px;
+
+    .plus-minus {
+      background-color: variables.$blue-light;
+      border-radius: 4px;
+      cursor: pointer;
+      color: variables.$blue-dark;
+      padding: 12px;
+
+      &.disable {
+        pointer-events: none;
+        background-color: variables.$grey-light;
+        color: variables.$grey-dark;
+      }
+    }
+  }
+}

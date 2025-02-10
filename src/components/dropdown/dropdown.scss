@@ -1,0 +1,39 @@
+@use '../../assets/styles/variables' as variables;
+
+.dropdown-holder {
+  background: variables.$white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  left: 0;
+  position: absolute;
+  top: 100%;
+  min-width: 350px;
+  width: 100%;
+  z-index: 2;
+
+  .option-holder {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    padding: 18px;
+
+    .check-icon {
+      color: variables.$blue;
+      margin-right: 8px;
+      visibility: hidden;
+    }
+
+    &.selected {
+      background-color: variables.$blue-light;
+
+      .check-icon {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-color: variables.$grey-light;
+    }
+  }
+}

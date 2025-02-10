@@ -1,0 +1,157 @@
+@use '../../assets/styles/variables' as variables;
+
+.flights-page {
+  width: 100%;
+
+  .header-holder {
+    align-items: end;
+    background-image: url('../../assets/images/flights-header.svg');
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .flights-body {
+    padding: 0 24px;
+  }
+
+  .flights-form {
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+    display: block;
+    margin: 48px auto 0;
+    max-width: 100%;
+    padding: 8px 16px 48px;
+    position: relative;
+    width: 1000px;
+
+    .top-section {
+      align-items: center;
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .search-inputs-container {
+      display: flex;
+      gap: 8px;
+      width: 59.6%;
+    }
+
+    .date-location-container {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+    }
+
+    .field-holder {
+      align-items: center;
+      display: flex;
+      position: relative;
+      flex: 1;
+
+      .search-input {
+        border: 1px solid variables.$grey;
+        border-radius: 4px;
+        height: 48px;
+        padding: 8px 24px 8px 52px;
+        outline: none;
+        width: 100%;
+
+        &:focus {
+          border-color: variables.$grey-dark;
+        }
+      }
+
+      .icon {
+        height: 20px;
+        position: absolute;
+        left: 20px;
+        width: 14px;
+      }
+
+      .plane-icon {
+        color: variables.$blue-dark;
+        margin-right: 8px;
+      }
+    }
+
+    .date-holder {
+      border: 1px solid variables.$grey;
+      border-radius: 4px;
+      display: flex;
+      overflow: hidden;
+      width: 39%;
+
+      .date-input {
+        border: none;
+        height: 46px;
+        outline: none;
+        padding: 8px 24px;
+        width: 50%;
+      }
+
+      .border {
+        border-right: 1px solid variables.$grey;
+        margin: 8px 0;
+        width: 0;
+      }
+    }
+
+    .submit-button {
+      align-items: center;
+      background-color: variables.$blue;
+      border-radius: 20px;
+      border: none;
+      color: variables.$white;
+      display: flex;
+      height: 40px;
+      justify-content: space-between;
+      left: calc(50% - 50px);
+      padding: 0 16px;
+      position: absolute;
+      top: calc(100% - 20px);
+      width: 110px;
+
+      &:hover {
+        background-color: variables.$blue-dark;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .date-location-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .search-inputs-container,
+      .date-holder {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 425px) {
+
+      .search-inputs-container,
+      .date-holder {
+        flex-direction: column;
+      }
+
+      .date-holder {
+        .date-input {
+          width: 100%;
+        }
+
+        .border {
+          border-top: 1px solid variables.$grey;
+          margin: 0 auto;
+          width: 90%;
+        }
+      }
+    }
+  }
+}

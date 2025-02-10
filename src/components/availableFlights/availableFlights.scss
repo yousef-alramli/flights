@@ -1,0 +1,80 @@
+@use '../../assets/styles/variables' as variables;
+
+.available-flights {
+  max-width: 1000px;
+  margin: 48px auto 0;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  .flights-table {
+
+    .table-row {
+      background-color: variables.$white;
+      border-radius: 3px;
+      box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      padding: 24px 32px;
+
+      .section {
+        display: contents;
+      }
+
+      .col {
+        align-items: center;
+        display: flex;
+      }
+
+      .col-1 {
+        align-items: center;
+        display: flex;
+        flex-basis: 22%;
+        gap: 8px;
+
+        .logo {
+          height: 32px;
+          width: 32px;
+        }
+      }
+
+      .col-2 {
+        flex-basis: 22%;
+      }
+
+      .col-3 {
+        flex-basis: 22%;
+      }
+
+      .col-4 {
+        flex-basis: 22%;
+      }
+
+      .col-5 {
+        flex-basis: 12%;
+      }
+    }
+
+    .loader {
+      justify-content: center;
+      display: flex;
+      margin: 42px 0;
+    }
+
+    @media all and (max-width: 720px) {
+      .table-row {
+        padding: 12px 16px;
+        justify-content: space-around;
+
+        .section {
+          display: block;
+        }
+
+        .col {
+          flex-basis: 100%;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}

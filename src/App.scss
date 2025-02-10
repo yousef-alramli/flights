@@ -1,0 +1,12 @@
+@import './assets/styles/reset';
+@import './assets/styles/typography';
+
+.app {
+  display: flex;
+  justify-content: center;
+
+  .content-container {
+    max-width: 1250px;
+    width: 100%;
+  }
+}

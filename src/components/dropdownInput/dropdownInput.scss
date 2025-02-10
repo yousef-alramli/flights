@@ -1,0 +1,46 @@
+@use '../../assets/styles/variables' as variables;
+
+.dropdown-input-container {
+  position: relative;
+  color: variables.$grey-darker;
+
+  .input-header {
+    border-radius: 4px;
+    color: variables.$grey-darker;
+    cursor: pointer;
+    display: flex;
+    padding: 8px 12px;
+
+    &:hover {
+      background-color: variables.$grey-light;
+    }
+  }
+
+  .caret-icon {
+    color: variables.$blue-dark;
+    margin-left: 6px;
+    transition: 300ms;
+  }
+
+  .border {
+    background-color: variables.$blue-dark;
+    height: 2px;
+    margin: 0 auto;
+    transition: width 300ms;
+    width: 0;
+  }
+
+  &.open {
+    .input-header {
+      background-color: variables.$blue-light;
+    }
+
+    .caret-icon {
+      transform: rotate(180deg);
+    }
+
+    .border {
+      width: 100%;
+    }
+  }
+}

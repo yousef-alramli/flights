@@ -1,0 +1,24 @@
+@use '../../assets/styles/variables' as variables;
+
+.count-input-container {
+  display: inline-block;
+  position: relative;
+
+  .user-icon {
+    color: variables.$blue-dark;
+    margin-right: 4px;
+  }
+
+  .dropdown-holder {
+    width: fit-content;
+
+    .option-holder {
+      cursor: auto;
+      width: fit-content;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
